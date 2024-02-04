@@ -24,29 +24,6 @@ CivilEngineer::CivilEngineer(const CivilEngineer& source)
     std::cout << "Custom copy constructor called for CivilEngineer ... " << std::endl;
 }
 
-/*
-//BAD : Compiler error - m_address is private to person
-CivilEngineer::CivilEngineer(std::string_view fullname,int age,
-    std::string_view address,int contract_count, std::string_view speciality)
-{
-    m_full_name = fullname;
-    m_age = age;
-    //m_address = address;
-    m_speciality = speciality;
-    std::cout << "Custom constructor called for CivilEnginner ... " << std::endl;
-}
-*/
-
-/*
-CivilEngineer::CivilEngineer(std::string_view fullname,int age,
-    std::string_view address,int contract_count, std::string_view speciality)
-    :m_full_name(fullname),m_age(age),m_address(address),m_speciality(speciality)
-{
-
-    std::cout << "Custom constructor called for CivilEnginner ... " << std::endl;
-}
-*/
-
 std::ostream& operator<<(std::ostream& out, const CivilEngineer& operand){
      out << "CivilEngineer [Full name : " << operand.get_full_name() <<
                     ",age : " << operand.get_age() << 
